@@ -6,7 +6,7 @@ This project was created as part of the **HNG Frontend Wizards — Stage 0 Task.
 
 ## Live Demo
 
-**Live URL:** https://live-link-here
+**Live URL:** https://chukwuderah.github.io/hng13-stage0-profile-card/
 
 **GitHub Repo:** https://github.com/Chukwuderah/hng13-stage0-profile-card
 
