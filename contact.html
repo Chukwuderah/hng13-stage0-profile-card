@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Profile Card</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <h1 class="nav-logo">Praevus</h1>
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li>
+            <a href="./contact.html" aria-current="page" class="active"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="page-container" data-testid="test-contact-page">
+      <article class="content-card">
+        <header class="page-header">
+          <h2>Contact Us</h2>
+          <p class="page-subtitle">
+            Have a question or want to work together? Drop me a message!
+          </p>
+        </header>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm" novalidate>
+          <!-- Full Name Field -->
+          <div>
+            <label for="contactName" class="form-label">
+              Full Name <span id="nameIcon" class="required" aria-label="required">*</span>
+            </label>
+            <input
+              type="text"
+              id="contactName"
+              name="name"
+              class="form-input"
+              data-testid="test-contact-name"
+              placeholder="Enter your full name"
+              required
+              aria-required="true"
+              aria-describedby="nameError"
+            />
+            <p
+              id="nameError"
+              class="error-message"
+              data-testid="test-contact-error-name"
+              role="alert"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <!-- Email Field -->
+          <div>
+            <label for="contactEmail" class="form-label">
+              Email Address
+              <span id="emailIcon" class="required" aria-label="required">*</span>
+            </label>
+            <input
+              type="email"
+              id="contactEmail"
+              name="email"
+              class="form-input"
+              data-testid="test-contact-email"
+              placeholder="your.email@example.com"
+              required
+              aria-required="true"
+              aria-describedby="emailError"
+            />
+            <p
+              id="emailError"
+              class="error-message"
+              data-testid="test-contact-error-email"
+              role="alert"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <!-- Subject Field -->
+          <div>
+            <label for="contactSubject" class="form-label">
+              Subject <span id="subjectIcon" class="required" aria-label="required">*</span>
+            </label>
+            <input
+              type="text"
+              id="contactSubject"
+              name="subject"
+              class="form-input"
+              data-testid="test-contact-subject"
+              placeholder="What's this about?"
+              required
+              aria-required="true"
+              aria-describedby="subjectError"
+            />
+            <p
+              id="subjectError"
+              class="error-message"
+              data-testid="test-contact-error-subject"
+              role="alert"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <!-- Message Field -->
+          <div>
+            <label for="contactMessage" class="form-label">
+              Message <span id="messageIcon" class="required" aria-label="required">*</span>
+            </label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              class="form-input form-textarea"
+              data-testid="test-contact-message"
+              placeholder="Tell me more..."
+              rows="6"
+              required
+              aria-required="true"
+              aria-describedby="messageError"
+            ></textarea>
+            <p
+              id="messageError"
+              class="error-message"
+              data-testid="test-contact-error-message"
+              role="alert"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <!-- Success Message -->
+          <div
+            id="successMessage"
+            class="success-message"
+            data-testid="test-contact-success"
+            role="status"
+            aria-live="polite"
+          ></div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="form-submit"
+            data-testid="test-contact-submit"
+          >
+            Send Message
+          </button>
+        </form>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <p>&copy; 2025 Praevus. All rights reserved.</p>
+    </footer>
+
+    <!-- Contact form validation script -->
+    <script type="module" src="./contact-validation.js"></script>
+  </body>
+</html>

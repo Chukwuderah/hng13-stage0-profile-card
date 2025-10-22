@@ -1,123 +1,133 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Card - HNG Stage 0</title>
+    <title>Profile Card</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <!-- Navigation bar -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <h1 class="nav-logo">Praevus</h1>
+        <ul class="nav-links">
+          <li>
+            <a href="./index.html" aria-current="page" class="active">Home</a>
+          </li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <!-- Main profile card container with semantic article element -->
-    <article class="profile-card" data-testid="test-profile-card">
+    <main class="page-container page-container--home">
+      <article class="profile-card" data-testid="test-profile-card">
+        <!-- Avatar section using semantic figure element -->
+        <figure class="profile-card__avatar-container">
+          <img
+            src="./asset/profile-pic.jpg"
+            alt="Chukwuderah Pleasant Frontend engineer and technical writer"
+            class="profile-card__avatar"
+            data-testid="test-user-avatar"
+          />
+        </figure>
 
-      <!-- Avatar section using semantic figure element -->
-      <figure class="profile-card__avatar-container">
-        <img
-          src="./asset/profile-pic.jpg"
-          alt="Chukwuderah Pleasant Frontend engineer and technical writer"
-          class="profile-card__avatar"
-          data-testid="test-user-avatar"
-        />
-      </figure>
+        <!-- Content section with all user information -->
+        <section class="profile-card__content">
+          <!-- Header with name and time -->
+          <header class="profile-card__header">
+            <h2 class="profile-card__name" data-testid="test-user-name">
+              Pleasant "Praevus" Chukwuderah
+            </h2>
+            <p class="profile-card__time">
+              <span class="profile-card__time-label">Current Time:</span>
+              <span data-testid="test-user-time" id="userTime">0</span>
+            </p>
+          </header>
 
-      <!-- Content section with all user information -->
-      <section class="profile-card__content">
-
-        <!-- Header with name and time -->
-        <header class="profile-card__header">
-          <h2 class="profile-card__name" data-testid="test-user-name">
-            Pleasant "Praevus" Chukwuderah
-          </h2>
-          <p class="profile-card__time">
-            <span class="profile-card__time-label">Current Time:</span>
-            <span data-testid="test-user-time" id="userTime">0</span>
+          <!-- Bio section -->
+          <p class="profile-card__bio" data-testid="test-user-bio">
+            Frontend engineer & technical writer passionate about clean UI,
+            smooth animations, and clever code.
           </p>
-        </header>
 
-        <!-- Bio section -->
-        <p class="profile-card__bio" data-testid="test-user-bio">
-          Frontend engineer & technical writer passionate about clean UI, smooth animations, and clever code.
-        </p>
-
-        <!-- Social links navigation -->
-        <nav
-          class="profile-card__social"
-          data-testid="test-user-social-links"
-          aria-label="Social media links"
-        >
-          <h3 class="profile-card__section-title">Connect</h3>
-          <ul class="profile-card__social-list">
-            <li>
-              <a
-                href="https://x.com/Pleasant_Dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="test-user-social-twitter"
-                aria-label="Visit Twitter profile"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Chukwuderah"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="test-user-social-github"
-                aria-label="Visit GitHub profile"
-              >
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/pleasant-chukwuderah-327149183/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="test-user-social-linkedin"
-                aria-label="Visit LinkedIn profile"
-              >
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- Hobbies and dislikes sections -->
-        <div class="profile-card__details">
-
-          <!-- Hobbies section -->
-          <section class="profile-card__section">
-            <h3 class="profile-card__section-title">Hobbies</h3>
-            <ul
-              class="profile-card__list"
-              data-testid="test-user-hobbies"
-            >
-              <li>Coding side projects</li>
-              <li>Designing UIs</li>
-              <li>Watching cartoons</li>
+          <!-- Social links navigation -->
+          <nav
+            class="profile-card__social"
+            data-testid="test-user-social-links"
+            aria-label="Social media links"
+          >
+            <h3 class="profile-card__section-title">Connect</h3>
+            <ul class="profile-card__social-list">
+              <li>
+                <a
+                  href="https://x.com/Pleasant_Dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-twitter"
+                  aria-label="Visit Twitter profile"
+                >
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Chukwuderah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-github"
+                  aria-label="Visit GitHub profile"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/pleasant-chukwuderah-327149183/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-linkedin"
+                  aria-label="Visit LinkedIn profile"
+                >
+                  LinkedIn
+                </a>
+              </li>
             </ul>
-          </section>
+          </nav>
 
-          <!-- Dislikes section -->
-          <section class="profile-card__section">
-            <h3 class="profile-card__section-title">Dislikes</h3>
-            <ul
-              class="profile-card__list"
-              data-testid="test-user-dislikes"
-            >
-              <li>Messy code</li>
-              <li>Slow builds</li>
-              <li>Bad Network</li>
-            </ul>
-          </section>
+          <!-- Hobbies and dislikes sections -->
+          <div class="profile-card__details">
+            <!-- Hobbies section -->
+            <section class="profile-card__section">
+              <h3 class="profile-card__section-title">Hobbies</h3>
+              <ul class="profile-card__list" data-testid="test-user-hobbies">
+                <li>Coding side projects</li>
+                <li>Designing UIs</li>
+                <li>Watching cartoons</li>
+              </ul>
+            </section>
 
-        </div>
+            <!-- Dislikes section -->
+            <section class="profile-card__section">
+              <h3 class="profile-card__section-title">Dislikes</h3>
+              <ul class="profile-card__list" data-testid="test-user-dislikes">
+                <li>Messy code</li>
+                <li>Slow builds</li>
+                <li>Bad Network</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      </article>
+    </main>
 
-      </section>
-
-    </article>
+    <!-- Footer -->
+    <footer class="main-footer">
+      <p>&copy; 2025 Praevus. All rights reserved.</p>
+    </footer>
 
     <!-- JavaScript for time updates -->
     <script type="module" src="./script.js"></script>

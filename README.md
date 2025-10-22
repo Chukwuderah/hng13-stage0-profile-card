@@ -56,10 +56,12 @@ This project demonstrates:
 
 ## Project Structure
 ```bash
-├── index.html       # Main HTML structure with data-testid attributes
-├── styles.css       # Responsive, minimalist design
-├── script.js        # Dynamic time updates and accessibility enhancement
-└── asset/
+├── index.html           # Stage 0 Profile Card
+├── about.html           # Stage 1 About Me Page
+├── contact.html         # Stage 1 Contact Us Page
+├── styles.css           # Shared responsive, accessible design
+├── script.js            # Handles interactivity & validation
+└── assets/
     └── profile-pic.jpg
 ```
 
